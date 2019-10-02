@@ -11,8 +11,8 @@ public class Task implements Serializable {
     }
 
     public Task(String title, String desc) {
-        this.title = title;
-        this.desc = desc;
+        this.title = title.trim();
+        this.desc = desc.trim();
     }
 
     public String getTitle() {
