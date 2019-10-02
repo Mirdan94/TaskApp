@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.EmptyStackException;
 import java.util.List;
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
@@ -27,7 +28,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.bind(list.get(position));
+            holder.bind(list.get(position));
     }
 
     @Override
@@ -46,8 +47,8 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
         }
 
         public void bind(Task task) {
-            textTitle.setText(task.getTitle());
-            textDesc.setText(task.getDesc());
-        }
+                textTitle.setText(task.getTitle());
+                textDesc.setText(task.getDesc());
+            }
     }
 }

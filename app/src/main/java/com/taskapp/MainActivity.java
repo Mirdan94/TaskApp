@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity
         adapter = new TaskAdapter(list);
         recyclerView.setAdapter(adapter);
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity
             Task task = (Task) data.getSerializableExtra("task");
             list.add(task);
             adapter.notifyDataSetChanged();
-            Log.wtf("TAG", "task = " + task.getTitle() );
+            Log.wtf("TAG", "task = " + task.getTitle());
         }
     }
 

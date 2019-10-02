@@ -16,6 +16,7 @@ public class Task implements Serializable {
     }
 
     public String getTitle() {
+
         return title;
     }
 
